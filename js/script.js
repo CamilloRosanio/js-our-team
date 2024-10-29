@@ -61,12 +61,43 @@ const teamMembers = [
 
 // Dchiaro la sezione "members" come elemento HTML 
 const memberSection = document.getElementById('members-section');
-// CONSOLE LOG DI CONTROLLO
-// console.log(memberSection.innerHTML);
 
 
 // Dichiaro la funzione che al caricamrnto della pagina stampa le Cards di tutti i membri
 
-let printCardMembers = (array) => {
+let printMembers = () => {
 
+  // Svuoto l'HTML della sezione che riempirò
+  memberSection.innerHTML = '';
+
+  // Dichiaro la variabile HTML su cui stampare tutto e la singola Card HTML per ciascun membro
+  let outputHTML = '';
+  let cardHTML;
+
+  // Per ciascun membro nell'Array
+  teamMembers.forEach(member => {
+ 
+    cardHTML = 
+    `<!-- COLUMN -->
+    <div class="col-12 col-md-6 col-lg-4">
+        <!-- MEMBER CARD -->
+        <div class="d-flex bg-dark text-white">
+            <!-- MEMBER PIC -->
+            <img class="object-fit-cover" src="./${member.img}" alt="">
+            <!--  MEMBER INFO -->
+            <div class="p-3">
+                <h3 class="h4">${member.name}</h5>
+                <p>${member.role}</p>
+                <a class="text-decoration-none" href="mailto:${member.email}">${member.email}</a>
+            </div>
+        </div>
+    </div>`
+
+    outputHTML += cardHTML;
+  });
+
+  return memberSection.innerHTML = outputHTML;
 }
+
+
+console.log(printMembers());
