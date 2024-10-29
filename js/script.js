@@ -55,7 +55,8 @@ const teamMembers = [
     role: "Analyst",
     email: "danielaamet@team.com",
     img: "img/female3.png"
-  }
+  },
+
 ];
 
 
@@ -66,9 +67,6 @@ const memberSection = document.getElementById('members-section');
 // Dichiaro la funzione che al caricamrnto della pagina stampa le Cards di tutti i membri
 
 let printMembers = () => {
-
-  // Svuoto l'HTML della sezione che riempirò
-  memberSection.innerHTML = '';
 
   // Dichiaro la variabile HTML su cui stampare tutto e la singola Card HTML per ciascun membro
   let outputHTML = '';
@@ -99,5 +97,42 @@ let printMembers = () => {
   return memberSection.innerHTML = outputHTML;
 }
 
+// Richiamo la funzione per riempire subito la pagina con le stampe dei membri attuali
+printMembers();
 
-console.log(printMembers());
+
+
+
+// Dichiaro gli elementi HTMl utili all'aggiunta di un nuovo membro
+const addMember_name = document.getElementById('addMember_name');
+const addMember_role = document.getElementById('addMember_role');
+const addMember_email = document.getElementById('addMember_email');
+
+const addMember_button = document.getElementById('addMember_button');
+
+
+// Attribuisco un EventListener al bottone
+addMember_button.addEventListener('click', () => {
+  let newMember;
+
+  let name = addMember_name.value;
+  let role = addMember_role.value;
+  let email = addMember_role.value;
+  let img = '';
+
+  // Al click del bottone svuoto l'inner HTML della sezione membri
+  memberSection.innerHTML = '';
+
+  // Dichiaro il mio nuovo object (membro)
+  newMember = {name, role, email, img,};
+
+  // Aggiungo il nuovo membro all'Array originale
+  teamMembers.push(newMember);
+
+  printMembers();
+  console.log(teamMembers);
+})
+
+
+
+console.log(teamMembers);

@@ -60,23 +60,36 @@
 
     <!-- CONTAINER -->
     <main>
+        <div class="container my-5 p-3 text-center bg-light rounded">
+            <!-- ADD MEMBER -->
+            <h2 class="h3 my-3">Add member</h2>
+
+            <!-- INPUTS -->
+            <div class="row">
+                <div class="col-4 my-2">
+                    <label for="addMember_name" class="d-block mb-2 text-primary">Full name</label> 
+                    <input type="text" id="addMember_name" placeholder="-" value=""> 
+                </div>
+
+                <div class="col-4">
+                    <label for="addMember_role" class="d-block mb-2 text-primary">Role</label>
+                    <input type="text" id="addMember_role" placeholder="-" value="">
+                </div>
+               
+                <div class="col-4">
+                    <label for="addMember_email" class="d-block mb-2 text-primary">Email</label>
+                    <input type="text" id="addMember_email" placeholder="-" value="">
+                </div>
+            </div>
+
+            <!-- BUTTON -->
+            <button type="click" id="addMember_button" class="btn btn-primary rounded">Confirm</button>
+        </div>
+
         <div class="container">
             <!-- MEMBERS -->
             <div class="row g-3" id="members-section">
-                <!-- COLUMN -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <!-- MEMBER CARD -->
-                    <div class="d-flex bg-dark text-white">
-                        <!-- MEMBER PIC -->
-                        <img class="object-fit-cover" src="./img/" alt="">
-                        <!--  MEMBER CONTENT -->
-                        <div class="p-3">
-                            <h3 class="h4">Nome</h5>
-                            <p>Ruolo</p>
-                            <a class="text-decoration-none" href="">Email</a>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </main>
