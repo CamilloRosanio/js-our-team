@@ -81,7 +81,7 @@ let printMembers = () => {
         <!-- MEMBER CARD -->
         <div class="d-flex bg-dark text-white">
             <!-- MEMBER PIC -->
-            <img class="object-fit-cover" src="./${member.img}" alt="">
+            <img class="fluid" src="./${member.img}" alt="">
             <!--  MEMBER INFO -->
             <div class="p-3">
                 <h3 class="h4">${member.name}</h5>

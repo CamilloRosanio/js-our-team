@@ -89,7 +89,20 @@
         <div class="container">
             <!-- MEMBERS -->
             <div class="row g-3 my-8" id="members-section">
-
+                <!-- COLUMN -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <!-- MEMBER CARD -->
+                    <div class="d-flex bg-dark text-white">
+                        <!-- MEMBER PIC -->
+                        <img class="fluid" src="./${member.img}" alt="">
+                        <!--  MEMBER INFO -->
+                        <div class="p-3">
+                            <h3 class="h4">${member.name}</h5>
+                            <p>${member.role}</p>
+                            <a class="text-decoration-none" href="mailto:${member.email}">${member.email}</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
