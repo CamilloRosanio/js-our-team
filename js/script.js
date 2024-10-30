@@ -117,7 +117,7 @@ addMember_button.addEventListener('click', () => {
 
   let name = addMember_name.value;
   let role = addMember_role.value;
-  let email = addMember_role.value;
+  let email = addMember_email.value;
   let img = '';
 
   // Al click del bottone svuoto l'inner HTML della sezione membri
@@ -128,6 +128,15 @@ addMember_button.addEventListener('click', () => {
 
   // Aggiungo il nuovo membro all'Array originale
   teamMembers.push(newMember);
+
+  // Resetto i valori degli input su "-"
+  addMember_name.value = '';
+  addMember_role.value = '';
+  addMember_email.value = '';
+  addMember_name.innerText = '-';
+  addMember_role.innerText = '-';
+  addMember_email.innerText = '-';
+  
 
   printMembers();
   console.log(teamMembers);
